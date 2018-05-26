@@ -87,7 +87,7 @@ This requires you to remember only three passwords, but it makes your data a lot
 
 <h2 id="email">Send an emai to the offending website</h2>
 
-If you notice that somebody has sent you your password back, you can send them the following email. 
+If you notice that somebody has sent you your password back, you can send them the following email. <span class="no-js">Just replace the values in square brackets.</span>
 
 <div class="email-form"></div>
 
@@ -109,4 +109,4 @@ your website.
 With kind regards,
 [your-name]
 
-<a href="mailto:website-owner?subject=Your+website+%28%5Baddress%5D%29+stores+my+password+in+cleartext&body=Dear+Sir+or+Madam%2C%0D%0A%0D%0AI+am+a+user+of+your+website+%28%5Baddress%5D%29.+I+recently+noticed+that+you+sent+me+my+password+by+%0D%0Aemail.+This+means+that+my+password+is+stored+in+unencrypted+form+in+your+database.+This+is%0D%0Aa+very+big+problem+that+you+need+to+address+quickly.%0D%0A%0D%0AYou+can+read+why+this+is+such+a+big+problem+on+the+following+%28non-profit%29+website%3A%0D%0A%0D%0Ahttp%3A%2F%2Fcleartxt.info%0D%0A%0D%0AI+hope+you+will+read+this+information+carefully+and+take+steps+to+fix+the+problems+with+%0D%0Ayour+website.+%0D%0A%0D%0AWith+kind+regards%2C%0D%0A%5Byour-name%5D" >Open in my email client</a>
+<a href="mailto:website-owner?subject=Your%20website%20%28%5Baddress%5D%29%20stores%20my%20password%20in%20cleartext%0D%0A&body=Dear%20Sir%20or%20Madam%2C%0D%0A%0D%0AI%20am%20a%20user%20of%20your%20website%20%28%5Baddress%5D%29.%20I%20recently%20noticed%20that%20you%20sent%20me%20my%20password%20by%20%0D%0Aemail.%20This%20means%20that%20my%20password%20is%20stored%20in%20unencrypted%20form%20in%20your%20database.%20This%20is%0D%0Aa%20very%20big%20problem%20that%20you%20need%20to%20address%20quickly.%0D%0A%0D%0AYou%20can%20read%20why%20this%20is%20such%20a%20big%20problem%20on%20the%20following%20%28non-profit%29%20website%3A%0D%0A%0D%0Ahttp%3A%2F%2Fcleartxt.info%0D%0A%0D%0AI%20hope%20you%20will%20read%20this%20information%20carefully%20and%20take%20steps%20to%20fix%20the%20problems%20with%20%0D%0Ayour%20website.%20%0D%0A%0D%0AWith%20kind%20regards%2C%0D%0A%5Byour-name%5D">Open in my email client</a>
