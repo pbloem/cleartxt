@@ -47,6 +47,14 @@ This is why it's important to build your websites on top of a common, well maint
  
 **Do not implement user management yourself**. Use standard solutions, and use them as they're designed to be used.
 
+## We only send users a plaintext password after a reset. The password is not stored in plaintext in the database.
+
+That's great, but it's still not good practice:
+ * Passwords shouldn't be sent over email. If you send a _reset link_ instead, you can disable it if it isn't used within an hour. 
+ * Users that use your service only once might be tempted not to change the password, which means it can be recovered from their email by an attacker. You can force them to change it, but then you might as well send them a reset link.
+ * This practice gives the user the impression that your passwords are stored in plaintext. It will make security-savvy users mistrust you.
+ * Other users will become accustomed to receiving passwords over email. It's better if this practice is eliminated as much as possible, so that users are suspicious when they see theur passwor in an e-mail.
+
 ## Are there any other security issues like these I should watch out for?
 
 Yes, many. As noted above, the main way to avoid security holes is to use standard solutions rather than your own implementations and to use them as they're designed to be used. However, it's good to be at least aware of the main pitfalls. Some common ones are:
