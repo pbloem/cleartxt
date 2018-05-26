@@ -85,23 +85,28 @@ One password for everything else.
 
 This requires you to remember only three passwords, but it makes your data a lot more secure. If your memory is good you can extend the number of passwords. For instance, you can use a separate password for physical devices, or use a separate passwords for sites that you know are untrustworthy (like those that send you your password by email).
 
-## Send an emai to the offending website
+<h2 id="email">Send an emai to the offending website</h2>
 
-Email:
+If you notice that somebody has sent you your password back, you can send them the following email. 
 
-Your website ($url) stores my passwords in cleartext.
+<div class="email-form"></div>
 
-Dear Sir or Madam,
+**subject**: Your website ([address]) stores my password in cleartext
 
-I am a user of your website ($url). I recently noticed that you sent me my password by email. This means that my password is stored in unencrypted form in your database. This is not only a huge problem in itself, but it shows that your website (and indeed company) likely have structural security issues.
+**body**: Dear Sir or Madam,
 
-To understand why this is such a big problem, please consult the following (non-profit) website:
+I am a user of your website ([address]). I recently noticed that you sent me my password by 
+email. This means that my password is stored in unencrypted form in your database. This is
+a very big problem that you need to address quickly.
 
-cleartxt.info
+You can read why this is such a big problem on the following (non-profit) website:
 
-Opt 1: Because of this problem I have decided not to continue to use your website. I implore you to take this problem seriously.
+http://cleartxt.info
 
-Opt 2: I reluctantly continue to use your service, but I will explicitly not trust you with any sensitive information. I urge you to take this problem seriously.
+I hope you will read this information carefully and take steps to fix the problems with 
+your website. 
 
 With kind regards,
-$Name
+[your-name]
+
+<a href="mailto:website-owner?subject=Your+website+%28%5Baddress%5D%29+stores+my+password+in+cleartext&body=Dear+Sir+or+Madam%2C%0D%0A%0D%0AI+am+a+user+of+your+website+%28%5Baddress%5D%29.+I+recently+noticed+that+you+sent+me+my+password+by+%0D%0Aemail.+This+means+that+my+password+is+stored+in+unencrypted+form+in+your+database.+This+is%0D%0Aa+very+big+problem+that+you+need+to+address+quickly.%0D%0A%0D%0AYou+can+read+why+this+is+such+a+big+problem+on+the+following+%28non-profit%29+website%3A%0D%0A%0D%0Ahttp%3A%2F%2Fcleartxt.info%0D%0A%0D%0AI+hope+you+will+read+this+information+carefully+and+take+steps+to+fix+the+problems+with+%0D%0Ayour+website.+%0D%0A%0D%0AWith+kind+regards%2C%0D%0A%5Byour-name%5D" >Open in my email client</a>
