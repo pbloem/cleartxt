@@ -1,4 +1,4 @@
-[Send someone to this website](...)
+[Send someone to this website](#email)
 # Your website or application stores passwords in clear text. This is a serious problem you should fix quickly.
 
 ## Why was I sent here?
@@ -22,15 +22,24 @@ This practice ensures that the password information stays safe, even in the foll
 Secondly, it stops you from sending passwords over email. Note that email is not encrypted by default, and anybody relaying an email between the sender and the receiver can read it.
 
 ## My website is not that important. There are no payments and security is not crucial.
-That means your site is a prime target for attack. Users reuse passwords. If I get access to your database:
+That makes your site is a prime target for attack. Users reuse passwords. If I get access to your database:
+
  1) I will get an email and a password for each of your users. 
  2) If any of them uses the same password for their email as for your site, I can access their email.
  3) If I can access their email I can reset the password for any other service they're subscribed to and basically access most of their online services.
 
 The fact that you're not serious about the basics of security means your website is probably easy to hack. This gives attackers a very simple starting point to find their way to user information that is sensitive.
 
+**It's not about your security, it's about the security of your users, beyond your website.**
+
 ## Our security is fine. Nobody is going to get access to our database.
-Is your security better than that of LinkedIn? Because [they were hacked](https://en.wikipedia.org/wiki/2012_LinkedIn_hack). So were [Adobe](https://www.theverge.com/2013/11/7/5078560/over-150-million-breached-records-from-adobe-hack-surface-online), [eBay](https://www.ebayinc.com/stories/news/ebay-inc-ask-ebay-users-change-passwords/) and [Yahoo](https://en.wikipedia.org/wiki/Yahoo!_data_breaches) (twice). Most of these companies _did_ encypt their passwords, but if they hadn't, millions of users would have had their identities stolen.
+
+Is your security better than that of LinkedIn? Because 
+[they were hacked](http://www.bbc.com/news/technology-18338956). So were 
+[Adobe](https://www.theverge.com/2013/11/7/5078560/over-150-million-breached-records-from-adobe-hack-surface-online), [eBay](https://www.ebayinc.com/stories/news/ebay-inc-ask-ebay-users-change-passwords/) and 
+[Yahoo](https://en.wikipedia.org/wiki/Yahoo!_data_breaches) (twice). Most of these 
+companies _did_ encypt their passwords, but if they hadn't, millions of users would have 
+had their identities stolen.
 
 If this is the first time you hear about password hashing, you have absolutely no reason to be confident about your security. But even if it is fine, and nobody will ever hack your site, there are many other ways this could go wrong:
 * You are (probably) emailing users their password. Emails are not encrypted by default and anybody relaying the email data from you to your sender can read that email.
@@ -85,7 +94,7 @@ One password for everything else.
 
 This requires you to remember only three passwords, but it makes your data a lot more secure. If your memory is good you can extend the number of passwords. For instance, you can use a separate password for physical devices, or use a separate passwords for sites that you know are untrustworthy (like those that send you your password by email).
 
-<h2 id="email">Send an emai to the offending website</h2>
+<h2 id="email">Send an email to the offending website</h2>
 
 If you notice that somebody has sent you your password back, you can send them the following email. <span class="no-js">Just replace the values in square brackets.</span>
 
@@ -109,8 +118,7 @@ your website.
 With kind regards,
 [your-name]
 
-<a href="mailto:?subject=Your%20website%20%28%5Baddress%5D%29%20stores%20my%20password%20in%20cleartext%0D%0A&body=Dear%20Sir%20or%20Madam%2C%0D%0A%0D%0AI%20am%20a%20user%20of%20your%20website%20%28%5Baddress%5D%29.%20I%20recently%20noticed%20that%20you%20sent%20me%20my%20password%20by%20%0D%0Aemail.%20This%20means%20that%20my%20password%20is%20stored%20in%20unencrypted%20form%20in%20your%20database.%20This%20is%0D%0Aa%20very%20big%20problem%20that%20you%20need%20to%20address%20quickly.%0D%0A%0D%0AYou%20can%20read%20why%20this%20is%20such%20a%20big%20problem%20on%20the%20following%20%28non-profit%29%20website%3A%0D%0A%0D%0Ahttp%3A%2F%2Fcleartxt.info%0D%0A%0D%0AI%20hope%20you%20will%20read%20this%20information%20carefully%20and%20take%20steps%20to%20fix%20the%20problems%20with%20%0D%0Ayour%20website.%20%0D%0A%0D%0AWith%20kind%20regards%2C%0D%0A%5Byour-name%5D">Open in my email client</a>
+<a class="email-link" href="mailto:?subject=Your%20website%20%28%5Baddress%5D%29%20stores%20my%20password%20in%20cleartext%0D%0A&body=Dear%20Sir%20or%20Madam%2C%0D%0A%0D%0AI%20am%20a%20user%20of%20your%20website%20%28%5Baddress%5D%29.%20I%20recently%20noticed%20that%20you%20sent%20me%20my%20password%20by%20%0D%0Aemail.%20This%20means%20that%20my%20password%20is%20stored%20in%20unencrypted%20form%20in%20your%20database.%20This%20is%0D%0Aa%20very%20big%20problem%20that%20you%20need%20to%20address%20quickly.%0D%0A%0D%0AYou%20can%20read%20why%20this%20is%20such%20a%20big%20problem%20on%20the%20following%20%28non-profit%29%20website%3A%0D%0A%0D%0Ahttp%3A%2F%2Fcleartxt.info%0D%0A%0D%0AI%20hope%20you%20will%20read%20this%20information%20carefully%20and%20take%20steps%20to%20fix%20the%20problems%20with%20%0D%0Ayour%20website.%20%0D%0A%0D%0AWith%20kind%20regards%2C%0D%0A%5Byour-name%5D">Open in my email client</a>
      
-<footer>
-	<p><small>Hosted on GitHub Pages</small></p>
-</footer>
+
+<footer>Hosted on GitHub Pages | Created by <a href="http://peterbloem.nl">Peter Bloem</a> | Questions or suggestions? <a href="https://github.com/pbloem/cleartxt/issues">Open a ticket.</a></footer>
