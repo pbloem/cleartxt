@@ -1,4 +1,4 @@
-<div><a class="action-link" href="#email">Send someone here</a></div>
+<div><a class="action-link" href="#send-email">Send someone here</a></div>
 # Your website or application stores passwords in clear text. This is a serious problem you should fix quickly.
 
 ## Why was I sent here?
@@ -133,7 +133,7 @@ If your memory is good you can extend the number of passwords. For instance, you
  separate password for physical devices, or use a separate passwords for sites that you know
   are untrustworthy (like those that send you back your own password).
 
-## Send an email to an offending website
+<h2 id="send-email">Send an email to an offending website</h2>
 
 If you notice that somebody has sent you your password back, you can send them the following
  email. <span class="no-js">Just replace the values in square brackets.</span>
