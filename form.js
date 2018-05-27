@@ -5,8 +5,8 @@ var subjectTemplate;
 $( document ).ready(function() 
 {
 
-	bodyTemplate = $('#email-example pre.body').inner()
-	subjectTemplate = $('#email-example pre.subject').inner()
+	bodyTemplate = $('#email-example pre.body').html()
+	subjectTemplate = $('#email-example pre.subject').html()
 	
 	$(".no-js").remove();
 
