@@ -218,7 +218,7 @@ pre {
 	margin: 1.6em 0;
 }
 
-pre + pre {
+.email-example pre {
 	margin: 0;
 }
 

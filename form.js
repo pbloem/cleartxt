@@ -65,6 +65,7 @@ function update() {
 	body =       bodyTemplate.replace("[your-name]", yourName)
 	body =               body.replace("[website]", theirWebsite)
 	
+	$('#email-example pre.to').html(to)	
 	$('#email-example pre.subject').html(subject)	
 	$('#email-example pre.body').html(body)
 	
