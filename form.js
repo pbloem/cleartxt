@@ -2,14 +2,12 @@ var bodyTemplate;
 var subjectTemplate;
 var toTemplate;
 
-
-
 $( document ).ready(function() 
 {
 
 	bodyTemplate = $('#email-example pre.body').html()
 	subjectTemplate = $('#email-example pre.subject').html()
-	subjectTemplate = $('#email-example pre.to').html()
+	toTemplate = $('#email-example pre.to').html()
 	
 	$(".no-js").remove();
 
@@ -58,12 +56,10 @@ function update() {
 	theirAddress = $('#their-address').attr('value');
 	theirWebsite = $('#their-website').attr('value');
 	
-	to = toTemplate("[their-address]", theirAddress)
-	
+	to =           toTemplate.replace("[their-address]", theirAddress)
 	subject = subjectTemplate.replace("[website]", theirWebsite)
-	
-	body = bodyTemplate.replace("[your-name]", yourName)
-	body =         body.replace("[website]", theirWebsite)
+	body =       bodyTemplate.replace("[your-name]", yourName)
+	body =               body.replace("[website]", theirWebsite)
 	
 	$('#email-example pre.subject').html(subject)	
 	$('#email-example pre.body').html(body)
