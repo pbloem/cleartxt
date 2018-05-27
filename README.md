@@ -133,7 +133,7 @@ If your memory is good you can extend the number of passwords. For instance, you
  separate password for physical devices, or use a separate passwords for sites that you know
   are untrustworthy (like those that send you back your own password).
 
-<h2 id="email">Send an email to the offending website</h2>
+## Send an email to an offending website
 
 If you notice that somebody has sent you your password back, you can send them the following
  email. <span class="no-js">Just replace the values in square brackets.</span>
