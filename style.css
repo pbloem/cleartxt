@@ -233,6 +233,7 @@ pre + pre {
 
 	justify-content: flex-end;
 	flex-wrap: wrap;
+	
 	position: relative;
 }
 
@@ -241,7 +242,7 @@ pre + pre {
 }
 
 .email-form input {
-	margin: 0 35% 0 1.6em;
+	margin: 0 25% 0 1.6em;
 }
 
 .email-form hr {
@@ -266,4 +267,40 @@ button {
 	right:1.6em;
 }
 
-.email-link
+.email-link {
+
+	z-index: 1000;
+
+	position: absolute;
+	top: 2em;
+	right: -1em;
+
+	background-color: white;
+	display: block;
+	
+	width: 5em;
+	height: 5em;
+	
+	color: white;
+	
+	margin-right: -1em;
+	padding: 1.2em 1em 0.8em;
+	
+	background: #1b81b9;
+	
+	text-decoration: none;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	transform: rotate(20deg);
+	
+	border-radius: 50%;
+	
+	text-align: center;
+	line-height: 1.5em;
+
+	padding: 1em 0 -1em 0;
+	
+	border: none;
+	box-shadow: 0.2em 0.2em 0em 0.05em hsl(0, 0%, 0%, 0.1) ;
+
+}

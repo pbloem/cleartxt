@@ -19,15 +19,6 @@ $( document ).ready(function()
 				.append($('<aside></aside>')
 					.append('Use this form to fill in the blanks. The values you enter are not sent anywhere and are not stored.')
 					.attr('class', 'explanation'))
-					
-				.append($('<label ></label>')
-					.append('your name')
-					.attr('for', 'your-name'))
-				.append($('<input />')
-					.attr('id', 'your-name')
-					.attr('type', 'text')
-					.on("change paste keyup", update))
-				.append($('<hr/>'))
 				
 				.append($('<label></label>')
 					.append('their email address')
@@ -43,6 +34,15 @@ $( document ).ready(function()
 					.attr('for', 'their-website'))
 				.append($('<input />')
 					.attr('id', 'their-website')
+					.attr('type', 'text')
+					.on("change paste keyup", update))
+				.append($('<hr/>'))
+				
+					.append($('<label ></label>')
+					.append('your name')
+					.attr('for', 'your-name'))
+				.append($('<input />')
+					.attr('id', 'your-name')
 					.attr('type', 'text')
 					.on("change paste keyup", update))
 				.append($('<hr/>'))
@@ -68,9 +68,9 @@ function update() {
 	$('#email-example pre.subject').html(subject)	
 	$('#email-example pre.body').html(body)
 	
-	mailtoLink = 	"mailto:" + theirAddress + 
-					"?subject=" + encodeURI(subject) + 
-					"&body="    + encodeURI(body);
+	mailtoLink = 	"mailto:" + theirAddress.substring(3) + 
+					"?subject=" + encodeURI(subject.substring(9)) + 
+					"&body="    + encodeURI(body.substring(6);
 					
 	$('.email-link').attr('href', mailtoLink)
 }

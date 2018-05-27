@@ -160,20 +160,20 @@ body: Dear Sir or Madam,
 
 I am a user of your website ([website]). I recently noticed that you sent me my password by 
 email. This means that my password is stored in unencrypted form in your database. This is
-a very big problem that you need to address quickly.
+a serious problem that you need to address quickly.
 
-You can read why this is such a big problem on the following (non-profit) website:
+You can read why on the following (non-profit) website:
 
 http://cleartxt.info
 
 I hope you will read this information carefully and take steps to fix the problems with 
-your website. 
+your website. If you can't, please ensure that some who can is made aware of the problem.
 
 With kind regards,
 [your-name]
 </pre>
 
-<a class="email-link" href="mailto:?subject=Your%20website%20%28%5Baddress%5D%29%20stores%20my%20password%20in%20cleartext%0D%0A&body=Dear%20Sir%20or%20Madam%2C%0D%0A%0D%0AI%20am%20a%20user%20of%20your%20website%20%28%5Baddress%5D%29.%20I%20recently%20noticed%20that%20you%20sent%20me%20my%20password%20by%20%0D%0Aemail.%20This%20means%20that%20my%20password%20is%20stored%20in%20unencrypted%20form%20in%20your%20database.%20This%20is%0D%0Aa%20very%20big%20problem%20that%20you%20need%20to%20address%20quickly.%0D%0A%0D%0AYou%20can%20read%20why%20this%20is%20such%20a%20big%20problem%20on%20the%20following%20%28non-profit%29%20website%3A%0D%0A%0D%0Ahttp%3A%2F%2Fcleartxt.info%0D%0A%0D%0AI%20hope%20you%20will%20read%20this%20information%20carefully%20and%20take%20steps%20to%20fix%20the%20problems%20with%20%0D%0Ayour%20website.%20%0D%0A%0D%0AWith%20kind%20regards%2C%0D%0A%5Byour-name%5D">Open in my email client</a>
+<a class="email-link" href="mailto:?subject=Your%20website%20%28%5Baddress%5D%29%20stores%20my%20password%20in%20cleartext%0D%0A&body=Dear%20Sir%20or%20Madam%2C%0D%0A%0D%0AI%20am%20a%20user%20of%20your%20website%20%28%5Baddress%5D%29.%20I%20recently%20noticed%20that%20you%20sent%20me%20my%20password%20by%20%0D%0Aemail.%20This%20means%20that%20my%20password%20is%20stored%20in%20unencrypted%20form%20in%20your%20database.%20This%20is%0D%0Aa%20very%20big%20problem%20that%20you%20need%20to%20address%20quickly.%0D%0A%0D%0AYou%20can%20read%20why%20this%20is%20such%20a%20big%20problem%20on%20the%20following%20%28non-profit%29%20website%3A%0D%0A%0D%0Ahttp%3A%2F%2Fcleartxt.info%0D%0A%0D%0AI%20hope%20you%20will%20read%20this%20information%20carefully%20and%20take%20steps%20to%20fix%20the%20problems%20with%20%0D%0Ayour%20website.%20%0D%0A%0D%0AWith%20kind%20regards%2C%0D%0A%5Byour-name%5D">Open in email client</a>
 </div>
 
 
