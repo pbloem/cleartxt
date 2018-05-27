@@ -18,27 +18,34 @@ You can change your password after logging in.
 With kind regards,
 The OCP Web Team
 </pre></div>
+<small>For more examples, see <a href="http://plaintextoffenders.com/">plaintextoffenders.com/</a></small
 
 The user is trying to tell you that this is a very serious security problem, and you should fix it.
 
 ## What's the problem?
 
-In a secure website, or any other application managing user information, **the operator should not be able to see the user's passwords**. If you can email me my password, that means you can see it. 
+In a secure website, or any other application managing user information, **the operator 
+should not be able to see the user's passwords**. If you can email me my password, that 
+means you can see it too. 
 
-You can obscure the passwords by [hashing](https://www.wired.com/2016/06/hacker-lexicon-password-hashing/) them. This encrypts the passwords in your database, but still allows you to check if a user knows their password.
+You can obscure the passwords by [hashing](https://www.wired.com/2016/06/hacker-lexicon-password-hashing/) them. 
+This encrypts the passwords in your database, but still allows you to check if a user knows 
+their password.
 
 This practice ensures that the password information stays safe, even in the following events:
  * Your site is hacked and your user's information is stolen.
  * An administrator you hired behaves unethically and steals user information.
 
-Secondly, it stops you from sending passwords over email. Note that email is not encrypted by default, and anybody relaying an email between the sender and the receiver can read it.
+It also stops you from sending passwords over email. Email is not encrypted by 
+default, and anybody relaying the email data between the sender and the receiver can read it.
 
 ## My website is not that important. There are no payments and security is not crucial.
+
 That makes your site a prime target for attack. Users reuse passwords. If I get access to your database:
 
- 1. I will get an email and a password for each of your users. 
- 2. If any of them uses the same password for their email as for your site, I can access their email.
- 3. If I can access their email I can reset the password for any other service they're subscribed to and basically access most of their online services.
+ 1. I will get an email address and a password for each user. 
+ 2. If any of them use the same password for their email as for your site, I can access their email.
+ 3. With access to their email I can reset the password for any other service they're subscribed to.
 
 The fact that you're not serious about the basics of security means your website is probably
 easy to hack, giving attackers a quick and easy place to start gathering user data.
@@ -57,16 +64,17 @@ had their identities stolen.
 If this is the first time you hear about password hashing, you have absolutely no reason to be confident about your security. But even if it is fine, and nobody will ever hack your site, there are many other ways this could go wrong:
  
  * You are (probably) emailing users their password. Emails are not encrypted by default and anybody relaying the email data from you to your sender can read that email.
- * Your system administrator and your developers have access to this data. They could read the emails of any users that reuse their email password for your site. I'm sure they're all very nice and trustworthy people but everybody has their weak moments. The more developers you hire, the more likely your are to trust the wrong person.
- * A careless developer might copy the database to their laptop for testing purposes. 
+ * Your system administrator and your developers have access to this data. They could read the emails of any users that reuse their email password for your site. I'm sure they're all very nice people, but it only takes one moment of weakness from one employee.
+ * A careless developer might copy the database to their laptop for testing purposes, and get hacked themselves. 
  * Your backups might be compromised, even if the main site is safe.
 
 # How should I fix this?
+
 The most direct fix is to implement [salting](https://en.wikipedia.org/wiki/Salt_(cryptography)) and [hashing](https://www.wired.com/2016/06/hacker-lexicon-password-hashing/) for your user passwords. 
 
-However, **the fact that you've implemented user management yourself hints at a bigger problem**. There are many common security mistakes like these, and unless you're a security specialist it's almost impossible to implement something by yourself that covers everything.
+However, **the fact that you've implemented user management _yourself_ hints at a bigger problem**. There are many common security mistakes like these, and unless you're a security specialist it's almost impossible to cover everything.
 
-This is why it's important to build your websites on top of a common, well maintained platform or library. Platforms like Ruby on Rails, node.js or Django are used to run thousands of websites and are maintained by hundreds of contributors. This means that when it comes to security, they can provide the attention to detail that you can't. Put simply: if you store user information you should build your website on a popular and well-maintained platform.
+This is why it's important to **build your websites on top of a well maintained platform or library**. Platforms like Ruby on Rails, Node.js or Django are used to run thousands of websites and are maintained by hundreds of contributors. This means that when it comes to security, they can provide the attention to detail that you can't. Put simply: if you store user information you should build your website on a popular and well-maintained platform.
  
 **Do not implement user management yourself**. Use standard solutions, and use them as they're designed to be used.
 

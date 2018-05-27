@@ -95,6 +95,15 @@ a.action-link {
 	padding: 1em 0 -1em 0;
 	
 	border: none;
-	box-shadow: 0em 0.2em hsl(0, 0%, 0%, 0.15);
+	box-shadow: 0.2em 0.2em 0.05em 0.1em hsl(0, 0%, 0%, 0.05) ;
 }
 
+pre {
+	font-family: Consolas, monospace;
+	
+	border: solid 1px #eee;
+	box-shadow: 0.2em 0.2em 0.05em 0.1em hsl(0, 0%, 0%, 0.05) ;
+	margin: 0px 30px;
+	padding: 30px;
+	
+	white-space: pre-wrap;}
