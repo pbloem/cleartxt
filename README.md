@@ -158,16 +158,13 @@ subject: Your website ([website]) stores my password in cleartext
 <pre class="body">
 body: Dear Sir or Madam,
 
-I am a user of your website ([website]). I recently noticed that you sent me my password by 
-email. This means that my password is stored in unencrypted form in your database. This is
-a serious problem that you need to address quickly.
+I am a user of your website ([website]). I recently noticed that you sent me my password by email. This means that my password is stored in unencrypted form in your database. This is a serious problem that you need to address quickly.
 
 You can read why on the following (non-profit) website:
 
 http://cleartxt.info
 
-I hope you will read this information carefully and take steps to fix the problems with 
-your website. If you can't, please ensure that some who can is made aware of the problem.
+I hope you will read this information carefully and take steps to fix the problems with our website. If you can't, please ensure that some who can is made aware of the problem.
 
 With kind regards,
 [your-name]
