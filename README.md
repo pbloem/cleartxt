@@ -18,7 +18,7 @@ You can change your password after logging in.
 With kind regards,
 The OCP Web Team
 </pre></div>
-<small>For more examples, see <a href="http://plaintextoffenders.com/">plaintextoffenders.com/</a></small
+<small>For more examples, see <a href="http://plaintextoffenders.com/">plaintextoffenders.com</a></small>
 
 The user is trying to tell you that this is a very serious security problem, and you should fix it.
 
@@ -68,7 +68,7 @@ If this is the first time you hear about password hashing, you have absolutely n
  * A careless developer might copy the database to their laptop for testing purposes, and get hacked themselves. 
  * Your backups might be compromised, even if the main site is safe.
 
-# How should I fix this?
+## How should I fix this?
 
 The most direct fix is to implement [salting](https://en.wikipedia.org/wiki/Salt_(cryptography)) and [hashing](https://www.wired.com/2016/06/hacker-lexicon-password-hashing/) for your user passwords. 
 
@@ -80,45 +80,63 @@ This is why it's important to **build your websites on top of a well maintained 
 
 ## We only send users a plaintext password after a reset. The password is not stored in plaintext in the database.
 
-That's great, but it's still not good practice:
- * Passwords shouldn't be sent over email. If you send a _reset link_ instead, you can disable it if it isn't used within an hour. 
- * Users that use your service only once might be tempted not to change the password, which means it can be recovered from their email by an attacker. You can force them to change it, but then you might as well send them a reset link.
- * This practice gives the user the impression that your passwords are stored in plaintext. It will make security-savvy users mistrust you.
- * Other users will become accustomed to receiving passwords over email. It's better if this practice is eliminated as much as possible, so that users are suspicious when they see theur passwor in an e-mail.
+That's great, but it's still not good practice. You should send send a _reset link_ instead:
 
-## Are there any other security issues like these I should watch out for?
+ * A link is easier to disable if it isn't used right away.
+  Users that use your service only once might be tempted not to change the password, which 
+ means it can be recovered from their email by an attacker. 
+ * Users should be distrustful when passwords are sent to them over email. You are eroding 
+ that security-consciousness.
+ * You may know that the passwords are stored properly, but the user doesn't. A reset link 
+  makes it easier for users to trust your security practices.
 
-Yes, many. As noted above, the main way to avoid security holes is to use standard solutions rather than your own implementations and to use them as they're designed to be used. However, it's good to be at least aware of the main pitfalls. Some common ones are:
-* **[SQL injection](https://www.csoonline.com/article/3257429/application-security/what-is-sql-injection-this-oldie-but-goodie-can-make-your-web-applications-hurt.html)** This happens when a user can manipulate website forms to change the database queries. Most platforms take of  the construction of databse queries, so if you use them correctly, this won't happen. However, if you build database queries yourself you should be very careful about this.
-* **[Cross-site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting)** There are many ways an attacker can sneak javascript onto your website, to manipulate it (for instance sending user information back to the attacker). 
-* **[Direct object references]**(http://www.hackingarticles.in/beginner-guide-insecure-direct-object-references/) This happens when you pass information back to a server to the URL or POST parameters. Anybody can manipulate this information. If a website gives me acces to my data with the url ```site.com/user_data&id=00223```, I can't help but try the url  ```site.com/user_data&id=00222``` as well, to see if the website will give me access to somebody else's data. 
+## I have more questions.
 
-## I have more questions
+Great! <a href="other-questions">This page has some more answers for you</a>.
 
-Great! If you think it's a question that other people might have too, you can open [a github issue for this page](). If we agree, we'll add it to the page. If it's specific to your situation, you can ask a question on [security.stackexchange.com](security.stackexchange.com).
+If your question is not on there, and you think it's a question that other people might have
+too, you can open [a github issue for this page](https://github.com/pbloem/cleartxt/issues). 
+If we agree, we'll add it to the page. If it's specific to your situation, you can ask a 
+question on [security.stackexchange.com](security.stackexchange.com).
 
 #  Information for users
 
 ## I received my password in cleartext. What should I do?
-Firstly, make sure that the password you use for this service is not used anywhere important. Never re-use the password you use for email. Ideally, use a password manager.
 
-Secondly, you can use the form below, to send them an email. If they get only one, they'll probably ignore it, but if they keep getting them, they'll start paying attention eventually.
+Firstly, make sure that the password you use for this service is not used anywhere 
+important. Never re-use the password you use for email. Ideally, use a password manager. If 
+possible, remove any personal information and ditch the service.
 
-## What else can I do to protect myself against sites like this.
-The main security issue is the fact that users re-use passwords for different services. Of course, nobody can remember a separate password for each service they use. There are two simple solutions.
+Secondly, you can use the form below, to send them an email. If they get only one, they'll
+ probably ignore it, but if they keep getting them, they'll start paying attention eventually.
 
-The first is to use a password manager. This securely stores a unique login for each service and you have to remember only one password: the one for your password manager. Good managers are ...
+## What else can I do to protect myself against sites like this?
 
-However, this does make logging in anywhere a bit more of a hassle. The second solution is to maintain a small set of passwords and to reuse passwords carefully. For instance:
-One password for your email and never reuse that anywhere (access to your email is access to everything).
-One password for sensitive services like banking, government services, PayPal, etc. Re-using passwords here is not ideal, but most of these services offer some extra protection so that is 
-One password for everything else. 
+The main security issue is the fact that users re-use passwords for different services. Of
+ course, nobody can remember a separate password for each service they use. There are two 
+ simple solutions.
 
-This requires you to remember only three passwords, but it makes your data a lot more secure. If your memory is good you can extend the number of passwords. For instance, you can use a separate password for physical devices, or use a separate passwords for sites that you know are untrustworthy (like those that send you your password by email).
+The first is to use a password manager. This securely stores a unique login for each service
+ and you have to remember only one password: the one for your password manager. Some OSs 
+ come with a password manages (like keychain on macOS). [This article](https://www.tomsguide.com/us/best-password-managers,review-3785.html) 
+ gives some other options.
+
+However, this does make logging in anywhere a bit more of a hassle. The second solution is
+ to maintain a small set of passwords and to reuse passwords carefully. For instance:
+ 
+ * One password for your email, never reused anywhere (access to your email is access to everything).
+ * One password for sensitive services like banking, government services, PayPal, etc. 
+ * One password for everything else. 
+
+This requires you to remember only three passwords, but it makes your data a lot more secure. 
+If your memory is good you can extend the number of passwords. For instance, you can use a
+ separate password for physical devices, or use a separate passwords for sites that you know
+  are untrustworthy (like those that send you back your own password).
 
 <h2 id="email">Send an email to the offending website</h2>
 
-If you notice that somebody has sent you your password back, you can send them the following email. <span class="no-js">Just replace the values in square brackets.</span>
+If you notice that somebody has sent you your password back, you can send them the following
+ email. <span class="no-js">Just replace the values in square brackets.</span>
 
 <div class="email-form"></div>
 

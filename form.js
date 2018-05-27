@@ -10,6 +10,7 @@ $( document ).ready(function()
 		.append(
 		
 			$('<form></form>')
+			    .attr('id', 'email-composer')
 				.append($('<div></div>')
 					.append('Use this form to fill in the blanks. The values you enter are not sent anywhere and are not stored.')
 					.attr('class', 'explanation'))
@@ -19,6 +20,7 @@ $( document ).ready(function()
 				.append($('<input />')
 					.attr('id', 'your-name')
 					.attr('type', 'text'))
+				.append($('<hr/>'))
 				
 				.append($('<label></label>')
 					.append('their address')
@@ -26,6 +28,7 @@ $( document ).ready(function()
 				.append($('<input />')
 					.attr('id', 'their-address')
 					.attr('type', 'text'))
+				.append($('<hr/>'))
 
 				.append($('<label></label>')
 					.append('their website (address or URL)')
@@ -33,6 +36,18 @@ $( document ).ready(function()
 				.append($('<input />')
 					.attr('id', 'their-website')
 					.attr('type', 'text'))
+				.append($('<hr/>'))
+				
+				.append($('<button></button>')
+					.append('Fill in')
+					.attr('form', 'email-composer')
+					.click(change))
 			
-		)
+		);
+		
 });
+
+function change() {
+	alert('click');
+
+}

@@ -12,7 +12,7 @@ body {
 	padding: 0;
 	
 	font-size: 16px;
-	line-height: 1.7em;
+	line-height: 1.6em;
 	font-family: Helvetica, Arial, sans-serif;
 }
 
@@ -26,31 +26,87 @@ h1, h2, h3, h4, h5 {
 	padding: 0 60px;
 }
 
-p, form, ul {
-	padding: 0 60px;
-}
 
 h1 {
-	font-size: 1.5em;
-	line-height: 1.45em;
+	font-size: 1.1em;
+	line-height: 1.4545em;
 	text-align: left;
 	
 	font-weight: bold;
-	color: #7d3b0e;
+	color: #9d5e16;
 	
-	padding: 1.2em 60px;
+	padding: 1.4545em 60px 1.4545em;
 	margin: 0;
-	background: #dedede;
+	background: #ccc;
+}
+
+
+p + h1, ul + h1, ol + h1 {
+	margin-top: 1.4545em;
 }
 
 h2 {
-	font-size: 0.95em;
+	font-size: 0.9em;
+	line-height: 1.7777em;
 	text-transform: uppercase;
 	
-	background: #eee;
-	padding: 0.65em 60px 0.55em 60px;
-	margin: 0;
+	background: #ddd;
+	padding: 0.8888em 60px;
+	margin: 0.8888em 0 0 0;
 	
+}
+
+h1 + h2 {
+	margin-top: 0;
+}
+
+p {
+	padding: 0 60px;
+	margin: 0.8em 0 ;
+}
+
+ul, ol {
+
+	padding: 0 60px;
+	display: block;
+	margin: 0.8em 0;
+	padding: 0;
+	
+	list-style: none;
+}
+
+ol { 
+	counter-reset: li;
+}
+
+ul li, ol li {
+	display: block;
+	margin: 0 60px 0;
+	padding: 0 0 0 1.6em;
+	
+	list-style: none;
+}
+
+ul li::before {	
+	content: "•"; 
+	color: #9d5e16;
+  	display: inline-block; 
+  	width: 1.6em;
+  	margin: 0 0 0 -1.6em;
+  	text-align: center;
+}
+
+li {
+	counter-increment: li;
+}
+
+ol li::before {	
+	content: counter(li) "."; 
+	color: #9d5e16;
+	display: inline-block;	
+	width: 1.6em;
+	margin: 0 0 0 -1.6em;
+	text-indent: 0em;
 }
 
 footer {	
@@ -64,8 +120,11 @@ a {
 	
 	text-decoration: none;
 	color: #9d5e16;
-	
-	}
+}
+
+a:hover {
+	border-bottom: dotted 1px #9d5e16;
+}
 
 a.action-link {
 	float: right;
@@ -77,7 +136,7 @@ a.action-link {
 	
 	color: white;
 	
-	margin-right: -5em;
+	margin-right: -1em;
 	padding: 1.2em 1em 0.8em;
 	
 	background: #68caff;
@@ -95,15 +154,58 @@ a.action-link {
 	padding: 1em 0 -1em 0;
 	
 	border: none;
-	box-shadow: 0.2em 0.2em 0.05em 0.1em hsl(0, 0%, 0%, 0.05) ;
+	box-shadow: 0.2em 0.2em 0.05em 0.1em hsl(0, 0%, 0%, 0.15) ;
 }
 
 pre {
 	font-family: Consolas, monospace;
 	
-	border: solid 1px #eee;
-	box-shadow: 0.2em 0.2em 0.05em 0.1em hsl(0, 0%, 0%, 0.05) ;
-	margin: 0px 30px;
-	padding: 30px;
+	white-space: pre-wrap;
 	
-	white-space: pre-wrap;}
+	font-size: 1em;
+	line-height: 1.6em;
+	margin: 1.6em 0;
+}
+
+.email-form, .email-example {
+
+	border: solid 1px #ddd;
+	box-shadow: 0.2em 0.2em 0.7em 0.5em hsl(0, 0%, 0%, 0.1) ;
+	margin: 0px 30px calc(1.6em - 2px);
+	padding: 0em 30px 0em 30px;
+	
+	white-space: pre-wrap;
+}
+
+.email-form form {
+	display: flex;
+	flex-direction:row;
+
+	justify-content: flex-end;
+	flex-wrap: wrap;
+}
+
+.email-form label {
+	align-self: flex-start;
+}
+
+.email-form input {
+	margin: 0 35% 0 1.6em;
+}
+
+.email-form hr {
+	width: 100%;
+	border: none;
+}
+
+.explanation {
+	font-size: 0.8em;
+	margin: -10px 0 0 0;
+	
+	flex: 0 0 100%;
+}
+
+small {
+	font-size: 0.8em;
+	float: right;
+}
