@@ -52,9 +52,13 @@ $( document ).ready(function()
 });
 
 function update() {
-	yourName = $('#your-name').attr('value');
-	theirAddress = $('#their-address').attr('value');
-	theirWebsite = $('#their-website').attr('value');
+	yourName = $('#your-name').val();
+	theirAddress = $('#their-address').val();
+	theirWebsite = $('#their-website').val();
+	
+	yourName     = yourName ? yourName : '[your-name]';
+	theirAddress = theirAddress ? theirAddress : '[their-address]';
+	theirWebsite = theirWebsite ? theirWebsite : '[website]';
 	
 	to =           toTemplate.replace("[their-address]", theirAddress)
 	subject = subjectTemplate.replace("[website]", theirWebsite)

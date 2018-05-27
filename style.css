@@ -252,9 +252,10 @@ pre + pre {
 .explanation {
 	font-size: 0.8em;
 	margin: 0 0 0.8em 0;
+	padding: 0;
 	
 	flex: 0 0 100%;
-	
+	text-align: left;
 }
 
 button {
