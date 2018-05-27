@@ -6,33 +6,33 @@ $( document ).ready(function()
 
 	$(".no-js").remove();
 
-	$("email-form")
+	$(".email-form")
 		.append(
 		
 			$('<form></form>')
 				.append($('<div></div>')
-					.append('Use this form to generate an email to send. The values you enter are not sent anywhere and are not stored.')
-					.attr('class', 'explanation')
+					.append('Use this form to fill in the blanks. The values you enter are not sent anywhere and are not stored.')
+					.attr('class', 'explanation'))
 				.append($('<label ></label>')
 					.append('your name')
-					.attr('for', 'your-name')
+					.attr('for', 'your-name'))
 				.append($('<input />')
-					.id('your-name')
-					.attr('type', 'text')
+					.attr('id', 'your-name')
+					.attr('type', 'text'))
 				
 				.append($('<label></label>')
 					.append('their address')
-					.attr('for', 'their-address')
+					.attr('for', 'their-address'))
 				.append($('<input />')
-					.id('their-address')
-					.attr('type', 'text')
+					.attr('id', 'their-address')
+					.attr('type', 'text'))
 
 				.append($('<label></label>')
 					.append('their website (address or URL)')
-					.attr('for', 'their-website')
+					.attr('for', 'their-website'))
 				.append($('<input />')
-					.id('their-website')
-					.attr('type', 'text')
+					.attr('id', 'their-website')
+					.attr('type', 'text'))
 			
 		)
 });

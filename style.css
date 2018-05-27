@@ -1,7 +1,100 @@
+html {
+	background: #FDC830;  /* fallback for old browsers */
+	background: linear-gradient(to bottom, #470000, #FDC830 30%, #FFF9E7);
+}
+
 body {
-	border: solid red 1px;
+	position: relative;
+	background: white;
+
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0;
+	
+	font-size: 16px;
+	line-height: 1.7em;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+	line-height: 1.6em;
+
+	font-family: Helvetica, Arial, sans-serif;
+	
+	font-weight: normal;
+	
+	padding: 0 60px;
+}
+
+p, form, ul {
+	padding: 0 60px;
+}
+
+h1 {
+	font-size: 1.5em;
+	line-height: 1.45em;
+	text-align: left;
+	
+	font-weight: bold;
+	color: #7d3b0e;
+	
+	padding: 1.2em 60px;
+	margin: 0;
+	background: #dedede;
+}
+
+h2 {
+	font-size: 0.95em;
+	text-transform: uppercase;
+	
+	background: #eee;
+	padding: 0.65em 60px 0.55em 60px;
+	margin: 0;
+	
 }
 
 footer {	
 	font-size: 0.8em;
+	text-align: center;
 }
+
+a {
+
+	font-weight: bold;
+	
+	text-decoration: none;
+	color: #9d5e16;
+	
+	}
+
+a.action-link {
+	float: right;
+	background-color: white;
+	display: block;
+	
+	width: 5em;
+	height: 5em;
+	
+	color: white;
+	
+	margin-right: -5em;
+	padding: 1.2em 1em 0.8em;
+	
+	background: #68caff;
+	
+	text-decoration: none;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	transform: rotate(20deg);
+	
+	border-radius: 50%;
+	
+	text-align: center;
+	line-height: 1.5em;
+
+	padding: 1em 0 -1em 0;
+	
+	border: none;
+	box-shadow: 0em 0.2em hsl(0, 0%, 0%, 0.15);
+}
+

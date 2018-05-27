@@ -1,4 +1,5 @@
-[Send someone to this website](#email)
+<a class="action-link" href="#email">Send someone here</a>
+
 # Your website or application stores passwords in clear text. This is a serious problem you should fix quickly.
 
 ## Why was I sent here?
