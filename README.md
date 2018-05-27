@@ -1,12 +1,23 @@
-<a class="action-link" href="#email">Send someone here</a>
-
+<div><a class="action-link" href="#email">Send someone here</a></div>
 # Your website or application stores passwords in clear text. This is a serious problem you should fix quickly.
 
 ## Why was I sent here?
 
 This link was most likely given to you by a user of your website, who noticed that you sent them an email containing their password. Something like this:
 
-<img>
+<div class="email-example"><pre>
+Dear Jane Doe,
+
+Thank you for registering with Omni Consumer Products. You can now log in with the following credentials:
+
+username: JaneDoe83
+password: wRty97/WOrp
+
+You can change your password after logging in.
+
+With kind regards,
+The OCP Web Team
+</pre></div>
 
 The user is trying to tell you that this is a very serious security problem, and you should fix it.
 
@@ -23,13 +34,14 @@ This practice ensures that the password information stays safe, even in the foll
 Secondly, it stops you from sending passwords over email. Note that email is not encrypted by default, and anybody relaying an email between the sender and the receiver can read it.
 
 ## My website is not that important. There are no payments and security is not crucial.
-That makes your site is a prime target for attack. Users reuse passwords. If I get access to your database:
+That makes your site a prime target for attack. Users reuse passwords. If I get access to your database:
 
- 1) I will get an email and a password for each of your users. 
- 2) If any of them uses the same password for their email as for your site, I can access their email.
- 3) If I can access their email I can reset the password for any other service they're subscribed to and basically access most of their online services.
+ 1. I will get an email and a password for each of your users. 
+ 2. If any of them uses the same password for their email as for your site, I can access their email.
+ 3. If I can access their email I can reset the password for any other service they're subscribed to and basically access most of their online services.
 
-The fact that you're not serious about the basics of security means your website is probably easy to hack. This gives attackers a very simple starting point to find their way to user information that is sensitive.
+The fact that you're not serious about the basics of security means your website is probably
+easy to hack, giving attackers a quick and easy place to start gathering user data.
 
 **It's not about your security, it's about the security of your users, beyond your website.**
 
@@ -43,7 +55,8 @@ companies _did_ encypt their passwords, but if they hadn't, millions of users wo
 had their identities stolen.
 
 If this is the first time you hear about password hashing, you have absolutely no reason to be confident about your security. But even if it is fine, and nobody will ever hack your site, there are many other ways this could go wrong:
-* You are (probably) emailing users their password. Emails are not encrypted by default and anybody relaying the email data from you to your sender can read that email.
+ 
+ * You are (probably) emailing users their password. Emails are not encrypted by default and anybody relaying the email data from you to your sender can read that email.
  * Your system administrator and your developers have access to this data. They could read the emails of any users that reuse their email password for your site. I'm sure they're all very nice and trustworthy people but everybody has their weak moments. The more developers you hire, the more likely your are to trust the wrong person.
  * A careless developer might copy the database to their laptop for testing purposes. 
  * Your backups might be compromised, even if the main site is safe.
@@ -101,9 +114,10 @@ If you notice that somebody has sent you your password back, you can send them t
 
 <div class="email-form"></div>
 
-**subject**: Your website ([address]) stores my password in cleartext
+<div class="email-example"><pre>
+subject: Your website ([address]) stores my password in cleartext
 
-**body**: Dear Sir or Madam,
+body: Dear Sir or Madam,
 
 I am a user of your website ([address]). I recently noticed that you sent me my password by 
 email. This means that my password is stored in unencrypted form in your database. This is
@@ -118,8 +132,8 @@ your website.
 
 With kind regards,
 [your-name]
+</pre></div>
 
 <a class="email-link" href="mailto:?subject=Your%20website%20%28%5Baddress%5D%29%20stores%20my%20password%20in%20cleartext%0D%0A&body=Dear%20Sir%20or%20Madam%2C%0D%0A%0D%0AI%20am%20a%20user%20of%20your%20website%20%28%5Baddress%5D%29.%20I%20recently%20noticed%20that%20you%20sent%20me%20my%20password%20by%20%0D%0Aemail.%20This%20means%20that%20my%20password%20is%20stored%20in%20unencrypted%20form%20in%20your%20database.%20This%20is%0D%0Aa%20very%20big%20problem%20that%20you%20need%20to%20address%20quickly.%0D%0A%0D%0AYou%20can%20read%20why%20this%20is%20such%20a%20big%20problem%20on%20the%20following%20%28non-profit%29%20website%3A%0D%0A%0D%0Ahttp%3A%2F%2Fcleartxt.info%0D%0A%0D%0AI%20hope%20you%20will%20read%20this%20information%20carefully%20and%20take%20steps%20to%20fix%20the%20problems%20with%20%0D%0Ayour%20website.%20%0D%0A%0D%0AWith%20kind%20regards%2C%0D%0A%5Byour-name%5D">Open in my email client</a>
-     
 
 <footer>Hosted on GitHub Pages | Created by <a href="http://peterbloem.nl">Peter Bloem</a> | Questions or suggestions? <a href="https://github.com/pbloem/cleartxt/issues">Open a ticket.</a></footer>
