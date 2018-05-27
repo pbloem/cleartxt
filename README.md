@@ -41,7 +41,7 @@ default, and anybody relaying the email data between the sender and the receiver
 
 ## My website is not that important. There are no payments and security is not crucial.
 
-That makes your site a prime target for attack. **Users reuse passwords.**f I get access to your database:
+That makes your site a prime target for attack. **Users reuse passwords.** If I get access to your database:
 
  1. I will get an email address and a password for each user. 
  2. If any of them use the same password for their email as for your site, I can access their email.

@@ -1,6 +1,6 @@
 html {
-	background: #FDC830;  /* fallback for old browsers */
-	background: linear-gradient(to bottom, #470000, #FDC830 30%, #FFF9E7);
+	background: #141E30;  /* fallback for old browsers */
+	background: linear-gradient(to bottom, #141E30, #243B55 35%, #243B5533); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 body {
@@ -14,6 +14,8 @@ body {
 	font-size: 16px;
 	line-height: 1.6em;
 	font-family: Helvetica, Arial, sans-serif;
+	
+	box-shadow: 0em -10em 7em 7em hsl(256, 100%, 90%, 0.3) ;
 }
 
 h1, h2, h3, h4, h5 {
@@ -34,11 +36,11 @@ h1 {
 	text-align: left;
 	
 	font-weight: bold;
-	color: #9d5e16;
+	color: white;
 	
 	padding: 1.4545em 60px 1.4545em;
 	margin: 0;
-	background: #ccc;
+	background: #141E30;
 }
 
 
@@ -148,23 +150,16 @@ ol li::before {
 	text-indent: 0em;
 }
 
-footer {	
-	font-size: 0.8em;
-	text-align: center;
-	
-	margin-top: 3.2em;
-}
-
 a {
 
 	font-weight: bold;
 	
 	text-decoration: none;
-	color: #9d5e16;
+	color:#7b3f02;
 }
 
 a:hover {
-	border-bottom: dotted 1px #9d5e16;
+	border-bottom: dotted 1px #7b3f02;
 }
 
 a.action-link {
@@ -185,7 +180,7 @@ a.action-link {
 	margin-right: -1em;
 	padding: 1.2em 1em 0.8em;
 	
-	background: #1b81b9;
+	background: #30465e;
 	
 	text-decoration: none;
 	font-family: Helvetica, Arial, sans-serif;
@@ -227,7 +222,7 @@ pre {
 	border: solid 1px #ddd;
 	box-shadow: 0.2em 0.2em 0.0em 0.05em hsl(0, 0%, 0%, 0.1) ;
 	margin: 0px 30px calc(1.6em - 2px);
-	padding: 0em 30px 0em 30px;
+	padding: 0.8em 30px 0.8em 30px;
 	
 	white-space: pre-wrap;
 	
@@ -278,7 +273,7 @@ button {
 
 	position: absolute;
 	top: 2em;
-	right: -1em;
+	right: -1.5em;
 
 	background-color: white;
 	display: block;
@@ -291,7 +286,7 @@ button {
 	margin-right: -1em;
 	padding: 1.2em 1em 0.8em;
 	
-	background: #1b81b9;
+	background: #30465e;
 	
 	text-decoration: none;
 	font-family: Helvetica, Arial, sans-serif;
@@ -312,3 +307,57 @@ button {
 .email-link:hover {
 	border: none;
 }
+
+pre.body {
+
+	margin-bottom: -3.2em;
+}
+
+.twitter {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL0SURBVGhD7dlpqA1hHMfxY1f2pSyRspREpGxlLSElpCReuLZSEuGFF5YkCaW8kRckhUS8kCzlBRLlBZItkmRP2bLv31/nnoxz/+fOnGeemXPU/OrTnTvN85+595x55nmeyWXJkiVLmmmBNvnN/ystsRRn8QG/a33ERaxAR9SXBuie36ybVmiU30ws8/EShYsv5Q30BzVEMLq+2biJsdphZRN25je9RxewC9ZF1+cI9OlMhdo/gfZfgBmd6AV00Brt8JztCF5gHPoK9oGZIQgevBn6HvrINARrx/EF46Honz8ov/k3C1DcaC+aIE4a4w6Ka7t4hFmYjh14hgn4J6tgNb6CXnCNTmTVdfG56PfVqJMlCB4U9A4LUdyDRIk6D6tmXNtgZjKsBkGXMRzl5DysWq5+YR1KpgN+wGocpEInMA5Rcg9WHVfqhkNzElbjUq5D39PeKJVrsNq6UucRmhGI8qlYbmEPFkFdeRfonjoO63hXke9TPT+sAi6+4WvRvjj0IAxN+9qfTXEKVqFKe47QrMcNLIMGY0dhFaskjYxDo++21bia7ENo+sFqXE2WI1JuwypQLYYiUubBKlANNEyK9AxR1Eefg1Wo0g6irHTDA1jFKmkGyk4PXIVVsBJeQc83pzSDni1aBLCKp2kjnKIpbl+0Q09sRXDZJk2foHGbcy7BKpw2/RNjxeeCgavXKIwBY+UYrBOkpQZeovVYTZ6skyRNkzyvaYvTsE6WlMfoBO9RL6aP+T6sE/ukidgwJBoNYUZhLQ7A5+xPvsPpCe4aLVP6XlTQWsFMpJLO2ALNxa2LcfUeU5BodH8MhlZItIBsXUgcDzEAsaMuVsMQDUe6YiAmYTEOIcpLGVe70Rpeoht4DrTSbZ0sCXrbNBGJRKPdlXgK6+Q+3MVcRF5kixO9PNGC9mH4uCd0I+/HGPh6cVR2dP/oftmAM3gL62ILfkKzSw0vNIcYjcjz7LSj0Wh/aJ1Yr8BGQh2EOozmyJIlS9Ull/sDJKNw3QwWZlkAAAAASUVORK5CYII=);
+	text-indent: -1000em;
+
+    background-size: contain;
+	background: repeat: no-repeat;
+	
+	position: relative;
+	top: 0.5em;
+}
+
+footer {	
+	font-size: 0.8em;
+	text-align: center;
+	
+	margin-top: 3.2em;
+}
+
+footer ul {
+	display: inline;
+	list-style: none;
+	margin: 0;
+	padding: 0
+}
+
+footer li {
+	display: inline;
+	list-style: none;
+	margin: 0;
+	padding: 0
+}
+
+footer ul li::before {
+	display: none;
+}
+
+footer ul li + li::before {
+	content: "•"; 
+	color: #9d5e16;
+  	display: inline-block; 
+  	width: 1.6em;
+  	margin: 0 0 0 0em;
+  	text-align: center;
+}
+
