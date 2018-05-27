@@ -70,7 +70,7 @@ function update() {
 	
 	mailtoLink = 	"mailto:" + theirAddress.substring(3) + 
 					"?subject=" + encodeURI(subject.substring(9)) + 
-					"&body="    + encodeURI(body.substring(6);
+					"&body="    + encodeURI(body.substring(6));
 					
 	$('.email-link').attr('href', mailtoLink)
 }

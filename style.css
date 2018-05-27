@@ -214,7 +214,7 @@ pre {
 }
 
 pre + pre {
-	margin-top: 0;
+	margin: 0;
 }
 
 .email-form, .email-example {
