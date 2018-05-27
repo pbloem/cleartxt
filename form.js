@@ -69,7 +69,7 @@ function update() {
 	$('#email-example pre.subject').html(subject)	
 	$('#email-example pre.body').html(body)
 	
-	mailtoLink = 	"mailto:" + theirAddress.substring(3) + 
+	mailtoLink = 	"mailto:" + theirAddress + 
 					"?subject=" + encodeURI(subject.substring(9)) + 
 					"&body="    + encodeURI(body.substring(6));
 					
