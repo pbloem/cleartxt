@@ -149,7 +149,7 @@ If you notice that somebody has sent you your password back, you can send them t
 <div class="email-form"></div>
 
 <div id="email-example" class="email-example">
-<pre class="subject">
+<pre class="to">
 to: [their-address]
 </pre>
 <pre class="subject">

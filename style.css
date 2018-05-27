@@ -213,6 +213,10 @@ pre {
 	margin: 1.6em 0;
 }
 
+pre + pre {
+	margin-top: 0;
+}
+
 .email-form, .email-example {
 
 	border: solid 1px #ddd;

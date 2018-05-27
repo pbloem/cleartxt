@@ -1,5 +1,7 @@
 var bodyTemplate;
 var subjectTemplate;
+var toTemplate;
+
 
 
 $( document ).ready(function() 
@@ -7,6 +9,7 @@ $( document ).ready(function()
 
 	bodyTemplate = $('#email-example pre.body').html()
 	subjectTemplate = $('#email-example pre.subject').html()
+	subjectTemplate = $('#email-example pre.to').html()
 	
 	$(".no-js").remove();
 
