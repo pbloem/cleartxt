@@ -18,7 +18,7 @@ You can change your password after logging in.
 With kind regards,
 The OCP Web Team
 </pre></div>
-<aside>For more examples, see <a href="http://plaintextoffenders.com/">plaintextoffenders.com</a></aside>
+<aside>For more examples, see <a href="http://plaintextoffenders.com/">plaintextoffenders.com</a>.</aside>
 
 The user is trying to tell you that this is a very serious security problem, and you should fix it.
 
@@ -41,7 +41,7 @@ default, and anybody relaying the email data between the sender and the receiver
 
 ## My website is not that important. There are no payments and security is not crucial.
 
-That makes your site a prime target for attack. Users reuse passwords. If I get access to your database:
+That makes your site a prime target for attack. **Users reuse passwords.**f I get access to your database:
 
  1. I will get an email address and a password for each user. 
  2. If any of them use the same password for their email as for your site, I can access their email.
@@ -72,11 +72,19 @@ If this is the first time you hear about password hashing, you have absolutely n
 
 The most direct fix is to implement [salting](https://en.wikipedia.org/wiki/Salt_(cryptography)) and [hashing](https://www.wired.com/2016/06/hacker-lexicon-password-hashing/) for your user passwords. 
 
-However, **the fact that you've implemented user management _yourself_ hints at a bigger problem**. There are many common security mistakes like these, and unless you're a security specialist it's almost impossible to cover everything.
+However, **the fact that you've implemented user management _yourself_ hints at a bigger 
+problem**. There are many common security mistakes like these, and unless you're a security 
+specialist it's almost impossible to cover everything.
 
-This is why it's important to **build your websites on top of a well maintained platform or library**. Platforms like Ruby on Rails, Node.js or Django are used to run thousands of websites and are maintained by hundreds of contributors. This means that when it comes to security, they can provide the attention to detail that you can't. Put simply: if you store user information you should build your website on a popular and well-maintained platform.
+This is why it's important to **build your websites on top of a well maintained platform 
+or library**. Platforms like Ruby on Rails, Node.js or Django are used to run thousands 
+of websites and are maintained by hundreds of contributors. This means that when it comes 
+to security, they can provide the attention to detail that you can't. Put simply: if you 
+store user information you should build your website on a popular and well-maintained
+ platform.
  
-**Do not implement user management yourself**. Use standard solutions, and use them as they're designed to be used.
+**Do not implement user management yourself**. Use standard solutions, and use them as 
+they're designed to be used.
 
 ## We only send users a plaintext password after a reset. The password is not stored in plaintext in the database.
 
@@ -103,16 +111,16 @@ question on [security.stackexchange.com](security.stackexchange.com).
 
 ## I received my password in cleartext. What should I do?
 
-Firstly, make sure that the password you use for this service is not used anywhere 
+First, make sure that the password you use for this service is not used anywhere 
 important. Never re-use the password you use for email. Ideally, use a password manager. If 
 possible, remove any personal information and ditch the service.
 
-Secondly, you can use the form below, to send them an email. If they get only one, they'll
+Second, you can use the form below, to send them an email. If they get only one, they'll
  probably ignore it, but if they keep getting them, they'll start paying attention eventually.
 
 ## What else can I do to protect myself against sites like this?
 
-The main security issue is the fact that users re-use passwords for different services. Of
+The main security issue is the fact that users reuse passwords for different services. Of
  course, nobody can remember a separate password for each service they use. There are two 
  simple solutions.
 
@@ -140,12 +148,17 @@ If you notice that somebody has sent you your password back, you can send them t
 
 <div class="email-form"></div>
 
-<div class="email-example"><pre>
-subject: Your website ([address]) stores my password in cleartext
-
+<div id="email-example" class="email-example">
+<pre class="subject">
+to: [their-address]
+</pre>
+<pre class="subject">
+subject: Your website ([website]) stores my password in cleartext
+</pre>
+<pre class="body">
 body: Dear Sir or Madam,
 
-I am a user of your website ([address]). I recently noticed that you sent me my password by 
+I am a user of your website ([website]). I recently noticed that you sent me my password by 
 email. This means that my password is stored in unencrypted form in your database. This is
 a very big problem that you need to address quickly.
 
@@ -158,7 +171,9 @@ your website.
 
 With kind regards,
 [your-name]
-</pre></div>
+</pre>
 
 <a class="email-link" href="mailto:?subject=Your%20website%20%28%5Baddress%5D%29%20stores%20my%20password%20in%20cleartext%0D%0A&body=Dear%20Sir%20or%20Madam%2C%0D%0A%0D%0AI%20am%20a%20user%20of%20your%20website%20%28%5Baddress%5D%29.%20I%20recently%20noticed%20that%20you%20sent%20me%20my%20password%20by%20%0D%0Aemail.%20This%20means%20that%20my%20password%20is%20stored%20in%20unencrypted%20form%20in%20your%20database.%20This%20is%0D%0Aa%20very%20big%20problem%20that%20you%20need%20to%20address%20quickly.%0D%0A%0D%0AYou%20can%20read%20why%20this%20is%20such%20a%20big%20problem%20on%20the%20following%20%28non-profit%29%20website%3A%0D%0A%0D%0Ahttp%3A%2F%2Fcleartxt.info%0D%0A%0D%0AI%20hope%20you%20will%20read%20this%20information%20carefully%20and%20take%20steps%20to%20fix%20the%20problems%20with%20%0D%0Ayour%20website.%20%0D%0A%0D%0AWith%20kind%20regards%2C%0D%0A%5Byour-name%5D">Open in my email client</a>
+</div>
+
 

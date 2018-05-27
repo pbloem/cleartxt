@@ -1,9 +1,13 @@
+var bodyTemplate;
+var subjectTemplate;
+
+
 $( document ).ready(function() 
 {
 
-	emailBody = "Dear%20Sir%20or%20Madam%2C%0D%0A%0D%0AI%20am%20a%20user%20of%20your%20website%20%28%5Baddress%5D%29.%20I%20recently%20noticed%20that%20you%20sent%20me%20my%20password%20by%20%0D%0Aemail.%20This%20means%20that%20my%20password%20is%20stored%20in%20unencrypted%20form%20in%20your%20database.%20This%20is%0D%0Aa%20very%20big%20problem%20that%20you%20need%20to%20address%20quickly.%0D%0A%0D%0AYou%20can%20read%20why%20this%20is%20such%20a%20big%20problem%20on%20the%20following%20%28non-profit%29%20website%3A%0D%0A%0D%0Ahttp%3A%2F%2Fcleartxt.info%0D%0A%0D%0AI%20hope%20you%20will%20read%20this%20information%20carefully%20and%20take%20steps%20to%20fix%20the%20problems%20with%20%0D%0Ayour%20website.%20%0D%0A%0D%0AWith%20kind%20regards%2C%0D%0A%5Byour-name%5D";
-	emailSubject = "Your%20website%20%28%5Baddress%5D%29%20stores%20my%20password%20in%20cleartext%0D%0A";
-
+	bodyTemplate = $('#email-example pre.body').inner()
+	subjectTemplate = $('#email-example pre.subject').inner()
+	
 	$(".no-js").remove();
 
 	$(".email-form")
@@ -11,23 +15,26 @@ $( document ).ready(function()
 		
 			$('<form></form>')
 			    .attr('id', 'email-composer')
-				.append($('<div></div>')
+				.append($('<aside></aside>')
 					.append('Use this form to fill in the blanks. The values you enter are not sent anywhere and are not stored.')
 					.attr('class', 'explanation'))
+					
 				.append($('<label ></label>')
 					.append('your name')
 					.attr('for', 'your-name'))
 				.append($('<input />')
 					.attr('id', 'your-name')
-					.attr('type', 'text'))
+					.attr('type', 'text')
+					.on("change paste keyup", update))
 				.append($('<hr/>'))
 				
 				.append($('<label></label>')
-					.append('their address')
+					.append('their email address')
 					.attr('for', 'their-address'))
 				.append($('<input />')
 					.attr('id', 'their-address')
-					.attr('type', 'text'))
+					.attr('type', 'text')
+					.on("change paste keyup", update))
 				.append($('<hr/>'))
 
 				.append($('<label></label>')
@@ -35,19 +42,32 @@ $( document ).ready(function()
 					.attr('for', 'their-website'))
 				.append($('<input />')
 					.attr('id', 'their-website')
-					.attr('type', 'text'))
+					.attr('type', 'text')
+					.on("change paste keyup", update))
 				.append($('<hr/>'))
-				
-				.append($('<button></button>')
-					.append('Fill in')
-					.attr('form', 'email-composer')
-					.click(change))
-			
+							
 		);
 		
 });
 
-function change() {
-	alert('click');
-
+function update() {
+	yourName = $('#your-name').attr('value');
+	theirAddress = $('#their-address').attr('value');
+	theirWebsite = $('#their-website').attr('value');
+	
+	to = toTemplate("[their-address]", theirAddress)
+	
+	subject = subjectTemplate.replace("[website]", theirWebsite)
+	
+	body = bodyTemplate.replace("[your-name]", yourName)
+	body =         body.replace("[website]", theirWebsite)
+	
+	$('#email-example pre.subject').html(subject)	
+	$('#email-example pre.body').html(body)
+	
+	mailtoLink = 	"mailto:" + theirAddress + 
+					"?subject=" + encodeURI(subject) + 
+					"&body="    + encodeURI(body);
+					
+	$('.email-link').attr('href', mailtoLink)
 }
