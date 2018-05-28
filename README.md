@@ -98,10 +98,11 @@ That's great, but it's still not good practice. You should send send a _reset li
  * You may know that the passwords are stored properly, but the user doesn't. A reset link 
   makes it easier for users to trust your security practices.
   
-Finally, the fact that your sending out passwords, still shows you're implementing user 
-management _yourself_. Are you salting your hashes? Are you using a strong hashing algorithm 
-(not MD5, not SHA-1). [Here's a good overview of most things you need to think about], but 
-really, for something this complicated, you don't want to reinvent the wheel.
+Finally, the fact that you're sending out passwords still shows **you're implementing user 
+management _yourself_**. It's unlikely that you're getting exactly right. Are you salting 
+your hashes? Are you using a strong hashing algorithm (not MD5, not SHA-1)? [Here's a good
+ overview of most things you need to think about], but really, for something this 
+ complicated, you don't want to reinvent the wheel.
 
 ## I have more questions.
 
