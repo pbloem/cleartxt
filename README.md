@@ -20,7 +20,7 @@ The OCP Web Team
 </pre></div>
 <aside>For more examples, see <a href="http://plaintextoffenders.com/">plaintextoffenders.com</a>.</aside>
 
-The user is trying to tell you that this is a very serious security problem, and you should fix it.
+Your user is trying to tell you that this is a _very_ serious security problem, and you should fix it.
 
 ## What's the problem?
 
