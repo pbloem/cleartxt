@@ -63,8 +63,8 @@ had their identities stolen.
 
 If this is the first time you hear about password hashing, you have absolutely no reason to be confident about your security. But even if it is fine, and nobody will ever hack your site, there are many other ways this could go wrong:
  
- * You are (probably) emailing users their password. Emails are not encrypted by default and anybody relaying the email data from you to your sender can read that email.
- * Your system administrator and your developers have access to this data. They could read the emails of any users that reuse their email password for your site. I'm sure they're all very nice people, but it only takes one moment of weakness from one employee.
+ * You are (probably) emailing users their password. Emails are not encrypted by default and anybody relaying the email data can read that email.
+ * Your administrator and your developers have access to this data. They could read the emails of any users that reuse their email password for your site. I'm sure they're all very nice people, but it only takes one moment of weakness from one employee.
  * A careless developer might copy the database to their laptop for testing purposes, and get hacked themselves. 
  * Your backups might be compromised, even if the main site is safe.
 
@@ -101,7 +101,7 @@ That's great, but it's still not good practice. You should send send a _reset li
 Finally, the fact that you're sending out passwords still shows **you're implementing user 
 management _yourself_**. It's unlikely that you're getting exactly right. Are you salting 
 your hashes? Are you using a strong hashing algorithm (not MD5, not SHA-1)? [Here's a good
- overview of most things you need to think about], but really, for something this 
+ overview of most things you need to think about](https://nakedsecurity.sophos.com/2013/11/20/serious-security-how-to-store-your-users-passwords-safely/), but really, for something this 
  complicated, you don't want to reinvent the wheel.
 
 ## I have more questions.
@@ -121,7 +121,7 @@ First, make sure that the password you use for this service is not used anywhere
 important. Never re-use the password you use for email. Ideally, use a password manager. If 
 possible, remove any personal information and ditch the service.
 
-Second, you can use the form below, to send them an email. If they get only one, they'll
+Second, you can use [the form below](#send-email), to send them an email. If they get only one, they'll
  probably ignore it, but if they keep getting them, they'll start paying attention eventually.
 
 ## What else can I do to protect myself against sites like this?
