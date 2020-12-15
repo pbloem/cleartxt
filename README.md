@@ -170,7 +170,7 @@ You can read why on the following (non-profit) website:
 
 http://cleartxt.info
 
-I hope you will read this information carefully and take steps to fix the problems with your website. If you can't, please ensure that some who can is made aware of the problem.
+I hope you will read this information carefully and take steps to fix the problems with your website. If you can't, please ensure that someone who can is made aware of the problem.
 
 With kind regards,
 [your-name]
