@@ -30,7 +30,7 @@ $( document ).ready(function()
 				.append($('<hr/>'))
 
 				.append($('<label></label>')
-					.append('their website (address or URL)')
+					.append('their website (name or address)')
 					.attr('for', 'their-website'))
 				.append($('<input />')
 					.attr('id', 'their-website')
