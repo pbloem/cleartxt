@@ -18,7 +18,7 @@ You can change your password after logging in.
 With kind regards,
 The OCP Web Team
 </pre></div>
-<aside>For more examples, see <a href="http://plaintextoffenders.com/">plaintextoffenders.com</a>.</aside>
+<aside>For more examples, see <a href="https://plaintextoffenders.com/">plaintextoffenders.com</a>.</aside>
 
 Your user is trying to tell you that this is a _very_ serious security problem, and you should fix it.
 
@@ -55,7 +55,7 @@ easy to hack, giving attackers a quick and easy place to start gathering user da
 ## Our security is fine. Nobody is going to get access to our database.
 
 Is your security better than that of LinkedIn? Because 
-[they were hacked](http://www.bbc.com/news/technology-18338956). So were 
+[they were hacked](https://www.bbc.com/news/technology-18338956). So were 
 [Adobe](https://www.theverge.com/2013/11/7/5078560/over-150-million-breached-records-from-adobe-hack-surface-online), [eBay](https://www.ebayinc.com/stories/news/ebay-inc-ask-ebay-users-change-passwords/) and 
 [Yahoo](https://en.wikipedia.org/wiki/Yahoo!_data_breaches) (twice). Most of these 
 companies _did_ encypt their passwords, but if they hadn't, millions of users would have 
@@ -168,7 +168,7 @@ I am a user of your website ([website]). I recently noticed that you sent me my 
 
 You can read why on the following (non-profit) website:
 
-http://cleartxt.info
+https://cleartxt.info
 
 I hope you will read this information carefully and take steps to fix the problems with your website. If you can't, please ensure that someone who can is made aware of the problem.
 
@@ -176,7 +176,7 @@ With kind regards,
 [your-name]
 </pre>
 
-<a class="email-link" href="mailto:?subject=Your%20website%20%28%5Baddress%5D%29%20stores%20my%20password%20in%20cleartext%0D%0A&body=Dear%20Sir%20or%20Madam%2C%0D%0A%0D%0AI%20am%20a%20user%20of%20your%20website%20%28%5Baddress%5D%29.%20I%20recently%20noticed%20that%20you%20sent%20me%20my%20password%20by%20%0D%0Aemail.%20This%20means%20that%20my%20password%20is%20stored%20in%20unencrypted%20form%20in%20your%20database.%20This%20is%0D%0Aa%20very%20big%20problem%20that%20you%20need%20to%20address%20quickly.%0D%0A%0D%0AYou%20can%20read%20why%20this%20is%20such%20a%20big%20problem%20on%20the%20following%20%28non-profit%29%20website%3A%0D%0A%0D%0Ahttp%3A%2F%2Fcleartxt.info%0D%0A%0D%0AI%20hope%20you%20will%20read%20this%20information%20carefully%20and%20take%20steps%20to%20fix%20the%20problems%20with%20%0D%0Ayour%20website.%20%0D%0A%0D%0AWith%20kind%20regards%2C%0D%0A%5Byour-name%5D">Open in email client</a>
+<a class="email-link" href="mailto:?subject=Your%20website%20%28%5Baddress%5D%29%20stores%20my%20password%20in%20cleartext%0D%0A&body=Dear%20Sir%20or%20Madam%2C%0D%0A%0D%0AI%20am%20a%20user%20of%20your%20website%20%28%5Baddress%5D%29.%20I%20recently%20noticed%20that%20you%20sent%20me%20my%20password%20by%20%0D%0Aemail.%20This%20means%20that%20my%20password%20is%20stored%20in%20unencrypted%20form%20in%20your%20database.%20This%20is%0D%0Aa%20very%20big%20problem%20that%20you%20need%20to%20address%20quickly.%0D%0A%0D%0AYou%20can%20read%20why%20this%20is%20such%20a%20big%20problem%20on%20the%20following%20%28non-profit%29%20website%3A%0D%0A%0D%0Ahttps%3A%2F%2Fcleartxt.info%0D%0A%0D%0AI%20hope%20you%20will%20read%20this%20information%20carefully%20and%20take%20steps%20to%20fix%20the%20problems%20with%20%0D%0Ayour%20website.%20%0D%0A%0D%0AWith%20kind%20regards%2C%0D%0A%5Byour-name%5D">Open in email client</a>
 </div>
 
 
